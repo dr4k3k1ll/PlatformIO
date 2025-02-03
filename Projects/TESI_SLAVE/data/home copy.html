@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHCAM-32</title>
+    <meta http-equiv="refresh" content="2">
+    <style>
+        body {
+            background-color: #9ed2e8; /* Sfondo azzurro */
+            font-family: Tahoma, sans-serif;
+            text-align: center;
+            color: #002366; /* Colore blu scuro per il testo */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+        background-color: #000;
+        color: #ff0000;
+        font-family: Impact, sans-serif;
+        margin: 0;
+        color: #ff0000;
+        font-family: Impact, sans-serif;
+        font-weight: 800;
+        padding: 40px;
+        font-size: 2.5em;
+    }
+
+        .status-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 6cm;
+            margin: 120px auto;
+            max-width: 800px;
+            padding: 0 1cm;
+        }
+
+        .status-container p {
+            line-height: 2.0; /* Aumenta lo spazio interlinea */
+            font-size: 1.3em;
+            font-family: Tahoma, sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12cm;
+            margin: 100px auto;
+            max-width: 800px;
+        }
+
+        button {
+    background-color: #191970;
+    color: #ff0000; /* Blu scuro per il pulsante */
+            color: #b2b2b2; /* Colore testo grigio chiaro */
+            padding: 15px 25px;
+            font-size: 1.2em;
+            font-family: Tahoma, sans-serif; /* Font più minimal ma accattivante per i pulsanti */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+        }
+
+        button:hover {
+            background-color: #4b75f3; /* Colore più scuro al passaggio del mouse */
+        }
+
+        a {
+            text-decoration: none; /* Rimuove la sottolineatura dal link */
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+        }
+
+        strong {
+            background-color: #0033cc;
+            color: #b2b2b2;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: Tahoma, sans-serif;
+            font-weight: 700; /* Font più minimal ma accattivante per il testo in evidenza */
+        }
+    </style>
+</head>
+<body>
+    <h1>DASHCAM-32</h1>
+    <div class="status-container">
+        <p>STATO CAMERA: <strong>%STATO_CAMERA%</strong></p>
+        <p>LIVELLO BATTERIA: <strong>%BATTERIA%</strong></p>
+    </div>
+    <div class="button-container"> 
+        <a href='/gallery'><button>GALLERIA</button></a>
+        <a href='/pictures'><button>SCATTA FOTO</button></a>
+        <a href='/accelerometer'><button>DATI SENSORE</button></a>
+    </div>
+</body>
+</html>

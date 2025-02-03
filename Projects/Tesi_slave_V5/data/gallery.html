@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria ESP32-CAM</title>
+</head>
+<body>
+  <style>
+    body { 
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        margin-top: 20px;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .gallery a {
+        text-decoration: none;
+    }
+
+    .card{
+      border-radius: 10px;
+      padding: 5px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .btn-group{
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+  <h1>GALLERIA DASHCAM-32</h1>
+  <div class="gallery" id="gallery">
+    
+  </div>
+
+  <script>
+    async function loadImages() {
+      const gallery = document.getElementById('gallery');
+
+      try {
+          const response = await fetch('http://192.168.4.1/list-images');
+          const images = await response.json();
+          // Controlla se l'array di immagini non è vuoto
+          if (images.length === 0) {
+              gallery.innerHTML = "<p>Nessuna immagine trovata.</p>";
+              return;
+          }
+          async function EliminaFoto(img){
+            const resp = fetch(`http://192.168.4.1/delete?name=${img}`).then(
+              (res)=>{
+                location.reload();
+              });
+          }
+          images.forEach(image => {
+          const imgElement = document.createElement('div');
+            imgElement.innerHTML = `
+            <div class="card">
+              <img src="http://192.168.4.1/images?name=${image}" alt="${image}">
+              <hr/>
+              <div class=btn-group>
+                <button>
+                  <a href="http://192.168.4.1/download?name=${image}" download>Download</a>
+                </button>
+                <button data-nome="${image}" id="${image.slice(0, image.length - 4)}">
+                  Elimina
+                </button>
+              </div>
+            </div>
+            `;
+          gallery.appendChild(imgElement);
+          const imagehtml = document.getElementById(image.slice(0, image.length - 4));
+          imagehtml.addEventListener("click", ()=>{
+              EliminaFoto(imagehtml.dataset.nome);
+            });
+          });
+
+
+      } catch (error) {
+          console.error("Errore nel caricamento delle immagini:", error);
+          gallery.innerHTML = "<p>Errore nel caricamento delle immagini.</p>";
+      }
+    }
+
+    window.onload = loadImages;
+  </script>
+</body>
+</html><!---->

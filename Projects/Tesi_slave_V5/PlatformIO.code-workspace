@@ -1,0 +1,85 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Desktop/PlatformIO"
+		},
+		{
+			"name": "blink led prova 1",
+			"path": "../blink led prova 1"
+		},
+		{
+			"name": "SPIFF",
+			"path": "../../../../Desktop/PlatformIO/Projects/SPIFF"
+		},
+		{
+			"name": "spiffs con webserver",
+			"path": "../spiffs con webserver"
+		},
+		{
+			"name": "BLUTOOTH",
+			"path": "../BLUTOOTH"
+		},
+		{
+			"name": "videosorveglianza 1",
+			"path": "../videosorveglianza 1"
+		},
+		{
+			"name": "240913-112346-esp32cam",
+			"path": "../240913-112346-esp32cam"
+		},
+		{
+			"name": "Gestione fotocamera",
+			"path": "../Gestione fotocamera"
+		},
+		{
+			"name": "TESI V0",
+			"path": "../TESI V0"
+		},
+		{
+			"name": "fotocamera v2",
+			"path": "../fotocamera v2"
+		},
+		{
+			"name": "Tesi_V_1.0",
+			"path": "../Tesi_V_1.0"
+		},
+		{
+			"name": "accellerometro",
+			"path": "../accellerometro"
+		},
+		{
+			"name": "Tesi_V_2",
+			"path": "../Tesi_V_2"
+		},
+		{
+			"name": "microsd",
+			"path": "../microsd"
+		},
+		{
+			"name": "microsd_camera_mpu",
+			"path": "../microsd_camera_mpu"
+		},
+		{
+			"name": "optical flow prova",
+			"path": "../optical flow prova"
+		},
+		{
+			"name": "Tesi_V_3_slave",
+			"path": "../Tesi_V_3_slave"
+		},
+		{
+			"name": "Tesi_Slave_V_4",
+			"path": "../Tesi_Slave_V_4"
+		},
+		{
+			"name": "Tesi_slave_V5",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PlatformIO",
+		"files.associations": {
+			"*.tcc": "cpp"
+		}
+	}
+}

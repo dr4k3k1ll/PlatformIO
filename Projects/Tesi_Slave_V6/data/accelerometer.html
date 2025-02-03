@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dati Accelerometro</title>
+    <meta http-equiv="refresh" content="2">
+    <style>
+        body {
+            background-color: #9ed2e8; /* Sfondo azzurro */
+            font-family: Tahoma, sans-serif;
+            text-align: center;
+            color: #002366; /* Colore blu scuro per il testo */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+        background-color: #000;
+        color: #ff0000;
+        font-family: Impact, sans-serif;
+        margin: 0;
+        color: #ff0000;
+        font-family: Impact, sans-serif;
+        font-weight: 800;
+        padding: 40px;
+        font-size: 2.5em;
+    }
+
+        .data-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5cm;
+            margin: 100px auto;
+            max-width: 800px;
+        }
+
+        .data-container p {
+            font-weight: bold;
+font-size: 1.3em;
+            line-height: 1.8;
+
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            font-weight: 700;
+        }
+
+        strong {
+            background-color: #0033cc;
+            color: #bfbfbf;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: Tahoma, sans-serif;
+            font-weight: 700; /* Font minimal ma accattivante per il testo in evidenza */
+        }
+    </style>
+</head>
+<body>
+    <h1>Accelerometro:</h1>
+    <div class="data-container">
+        <p>Accelerazione X: <strong>%AccX%</strong> m/s<sup>2</sup></p>
+        <p>Accelerazione Y: <strong>%AccY%</strong> m/s<sup>2</sup></p>
+        <p>Accelerazione Z: <strong>%AccZ%</strong> m/s<sup>2</sup></p>
+    </div>
+</body>
+</html>

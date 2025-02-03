@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"name": "Tesi_Slave_V6",
+			"path": "../../Tesi_Slave_V6"
+		},
+		{
+			"name": "Tesi_slave_V7",
+			"path": "../../Tesi_slave_V7"
+		},
+		{
+			"name": "TESI_SLAVE",
+			"path": ".."
+		},
+		{
+			"name": "blink led prova 1",
+			"path": "../../blink led prova 1"
+		},
+		{
+			"path": "../../../../../Desktop/corso pyton"
+		}
+	],
+	"settings": {}
+}

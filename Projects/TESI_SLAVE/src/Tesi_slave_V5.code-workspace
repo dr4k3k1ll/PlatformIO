@@ -1,0 +1,46 @@
+{
+	"folders": [
+		{
+			"path": "../../Tesi_slave_V5"
+		},
+		{
+			"name": "Tesi_Slave_V_4",
+			"path": "../../Tesi_Slave_V_4"
+		},
+		{
+			"name": "Tesi_Slave_V6",
+			"path": "../../Tesi_Slave_V6"
+		},
+		{
+			"name": "BLUTOOTH",
+			"path": "../../BLUTOOTH"
+		},
+		{
+			"name": "Tesi_slave_V7",
+			"path": "../../Tesi_slave_V7"
+		},
+		{
+			"name": "Tesi_slave.",
+			"path": "../../Tesi_slave."
+		},
+		{
+			"name": "TESI_SLAVE",
+			"path": ".."
+		},
+		{
+			"name": "Test comunicazione seriale",
+			"path": "../../Test comunicazione seriale"
+		},
+		{
+			"name": "Comunicazione seriale slave 2",
+			"path": "../../Comunicazione seriale slave 2"
+		},
+		{
+			"name": "blink led prova 1",
+			"path": "../../blink led prova 1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Tesi_slave_V7"
+	}
+}

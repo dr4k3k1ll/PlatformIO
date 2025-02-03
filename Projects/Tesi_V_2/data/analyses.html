@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dati Sensore MPU6050</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .sensor-data {
+            font-size: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dati del Sensore MPU6050</h1>
+    <div class="sensor-data">
+        <p>Accelerazione Media in X: <span id="accel_x">-</span></p>
+        <p>Accelerazione Media in Y: <span id="accel_y">-</span></p>
+        <p>Accelerazione Media in Z: <span id="accel_z">-</span></p>
+        <p>Velocità Media in X: <span id="V_x">-</span></p>
+        <p>Velocità Media in Y: <span id="V_y">-</span></p>
+        <p>Velocità Media in Z: <span id="V_z">-</span></p>
+    </div>
+
+    <script>
+        function fetchSensorData() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('accel_x').textContent = deltaA.map(num => num.toFixed(2));
+                    document.getElementById('accel_y').textContent = deltaA.map(num => num.toFixed(2));
+                    document.getElementById('accel_z').textContent = deltaA.map(num => num.toFixed(2));
+                    document.getElementById('V_x').textContent = (v2-v1).map(num => num.toFixed(2));
+                    document.getElementById('V_y').textContent = (v2-v1).map(num => num.toFixed(2));
+                    document.getElementById('V_z').textContent = (v2-v1).map(num => num.toFixed(2));
+                    
+                })
+                .catch(error => console.error('Errore nel caricamento dei dati:', error));
+        }
+
+        // Chiamata ogni 3 secondi per aggiornare i dati
+        setInterval(fetchSensorData, 3000);
+
+        // Prima chiamata per caricare subito i dati
+        fetchSensorData();
+    </script>
+</body>
+</html>
